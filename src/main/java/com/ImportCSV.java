@@ -1,7 +1,9 @@
 package com;
+
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvException;
+import comBase.ImportTable;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -32,6 +34,7 @@ public class ImportCSV {
 
                 System.out.println("Nom: " + ligne[0] + ", Prénom: " + ligne[1] + ", Classe: " + ligne[2]);
             }
+            ImportTable.importUtilisateur(lignes);
         } catch (IOException | CsvException e) {
             System.out.println("Erreur lors de la lecture du fichier : " + e.getMessage());
         }

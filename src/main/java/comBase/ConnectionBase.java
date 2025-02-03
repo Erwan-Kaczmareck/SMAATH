@@ -1,4 +1,5 @@
 package comBase;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,10 +34,5 @@ public class ConnectionBase {
             System.out.println("Erreur lors de la fermeture de la connexion !");
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        Connection conn = connect();
-        closeConnection(conn);
     }
 }
